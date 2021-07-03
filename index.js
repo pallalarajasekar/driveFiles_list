@@ -1,8 +1,9 @@
 const os = require("os")
 //console.log(os.networkInterfaces());
+const dotenv = require("dotenv");
 
 const http = require("http");
-const port = 8996;
+const port = process.env.PORT || 8996;
 
 const msg = require("./custom/newModule");
 
