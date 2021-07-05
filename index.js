@@ -34,7 +34,7 @@ app.get('/', async (req, res) => {
     // const filePath =  path.join(__dirname, "/custom/newModule.js");
     // res.status(200).sendFile(filePath);
     res.status(200);
-    const directoryPath = path.join('C:/');
+    const directoryPath = path.join(__dirname, "/custom");
     //var fileNames = [];
     fs.readdir(directoryPath, function (err, files) {
         if (err) {
@@ -49,6 +49,12 @@ app.get('/', async (req, res) => {
             }
             else if(data.includes('.sys')){
                 res.write('<div style="display:flex; align-items:center;"><img src ="./images/sys.png" width="20px"/><p style="padding-left:5px">'+data+'</p></div>');
+            }
+            else if(data.includes('.html')){
+                res.write('<div style="display:flex; align-items:center;"><img src ="./images/html.png" width="20px"/><p style="padding-left:5px">'+data+'</p></div>');
+            }
+            else if(data.includes('.js')){
+                res.write('<div style="display:flex; align-items:center;"><img src ="./images/js.png" width="20px"/><p style="padding-left:5px">'+data+'</p></div>');
             }
             else{
                 res.write('<div style="display:flex; align-items:center;"><img src ="./images/folderIcon.png" width="20px"/><p style="padding-left:5px">'+data+'</p></div>');
