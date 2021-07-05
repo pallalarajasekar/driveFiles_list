@@ -3,7 +3,7 @@ const path = require('path');
 const express = require('express');
 const app = express();
 
-
+const port = process.env.PORT || 9090;
 
 app.use('/', express.static('/'));
 app.use('/images', express.static('images'));
@@ -39,6 +39,6 @@ app.get('/',(req, res) =>{
 
  
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
     console.log("server started");
 })
