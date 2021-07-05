@@ -31,14 +31,6 @@ app.get('/',(req, res) =>{
     })
 })
 
-
-
-    app.get('/driver-files',(req, res) =>{        
-        
-    })
-
- 
-
 app.listen(port,()=>{
     console.log("server started");
 })
