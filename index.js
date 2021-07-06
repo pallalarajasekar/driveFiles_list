@@ -1,7 +1,7 @@
 require('dotenv').config();
 const os = require("os")
 //console.log(os.networkInterfaces());
-const dotenv = require("dotenv");
+//const dotenv = require("dotenv");
 
 const http = require("http");
 //const port = 8996;
@@ -45,7 +45,7 @@ app.get('/', async (req, res) => {
             console.log(data);
             if(data.includes(".txt")){
                 console.log(data);
-                res.write('<div style="display:flex; align-items:center;"><img src ="./images/sys.png" width="20px"/><p style="padding-left:5px">'+data+'</p></div>');
+                res.write('<div style="display:flex; align-items:center;"><img src ="./images/textFile.png" width="20px"/><p style="padding-left:5px">'+data+'</p></div>');
             }
             else if(data.includes('.sys')){
                 res.write('<div style="display:flex; align-items:center;"><img src ="./images/sys.png" width="20px"/><p style="padding-left:5px">'+data+'</p></div>');
